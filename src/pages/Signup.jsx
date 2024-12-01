@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { postAPI } from "../utils/fetchapi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 function Signup() {
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ function Signup() {
             let data = await postAPI("auth/signup", payload, null);
             if (data?.status) {
                 toast.success("Sign up successful! Please log in.");
-                navigate("/signin"); // Navigate to the sign-in page after successful signup
+                navigate("/signin");
             } else {
                 toast.error(data?.message);
             }
@@ -76,7 +76,7 @@ function Signup() {
                 </button>
             </form>
             <p className="signin-text">
-                Already have an account? <a href="#" onClick={() => navigate("/")}>Sign In</a>
+                Already have an account? <Link to="/">Sign In</Link>
             </p>
         </div>
     );
