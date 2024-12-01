@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import logo from "../Images/logo.gif";
-import backgroundImage from "../Images/bgimg.jpg";
+// import backgroundImage from "../Images/bgimg.jpg";
 import { toast } from "react-toastify";
 import { validateEmail } from "../utils/valEmail";
 import { useNavigate } from "react-router-dom";
 import { postAPI } from "../utils/fetchapi";
 
 const containerStyle = {
-  backgroundImage: `url(${backgroundImage})`,
+  // backgroundImage: `url(${backgroundImage})`,
   backgroundColor: "red",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
